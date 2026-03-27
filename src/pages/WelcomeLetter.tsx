@@ -1,3 +1,4 @@
+// Welcome Letter Component - Updated with Mobile Fixes and Query Safeguards
 import { useQuery } from '@tanstack/react-query';
 import { api, useAuth } from '../context/AuthContext';
 import logo from '../assets/images/logo.png';
