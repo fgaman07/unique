@@ -51,7 +51,12 @@ const WelcomeLetter = () => {
 
     return (
         <div className="p-4 bg-gray-50 min-h-screen font-sans print:p-0 print:bg-white">
-            <div className="print:hidden mb-4"><AdminUserSelector /></div>
+            {/* Admin-only selector to view other users' letters - Fully protected */}
+            {user?.role === 'ADMIN' && (
+                <div className="print:hidden mb-4">
+                    <AdminUserSelector />
+                </div>
+            )}
             {/* Print Styles */}
             <style dangerouslySetInnerHTML={{
                 __html: `
